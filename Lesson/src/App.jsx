@@ -4,6 +4,7 @@ import viteLogo from '/vite.svg'
 import './App.css'
 import AddTransaction from './components/add';
 import DisplayTransactions from './components/Display';
+import Home from './components/home';
 
 function App() {
   const [count, setCount] = useState(0)
@@ -22,8 +23,8 @@ function App() {
   return (
     <>
     <div className="container">
-      <DisplayTransactions transactions={transactions}/>
-      <AddTransaction add={add}/>
+      
+      <Home add={add} transactions={transactions} />
       </div>
     </>
   )
