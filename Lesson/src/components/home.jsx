@@ -1,7 +1,7 @@
 import AddTransaction from "./add"
 import DisplayTransactions from "./Display"
 function Home (props) {
-
+console.log(props.transactions)
     return(
 
         <>

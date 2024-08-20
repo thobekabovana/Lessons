@@ -5,6 +5,11 @@ import './App.css'
 import AddTransaction from './components/add';
 import DisplayTransactions from './components/Display';
 import Home from './components/home';
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import LogIn from './components/lod-in';
+import Sign from './components/SignUp';
+
+ 
 
 function App() {
   const [count, setCount] = useState(0)
@@ -22,10 +27,21 @@ function App() {
 
   return (
     <>
+ <BrowserRouter>
     <div className="container">
-      
-      <Home add={add} transactions={transactions} />
+   
+      <Routes>
+        <Route path="/" element={<LogIn />}></Route>
+
+
+          <Route path='/home' element={<Home add={add} transactions={transactions} />}/>
+
+          <Route path="/signUp" element={<Sign />}></Route>  
+          </Routes>
       </div>
+      </BrowserRouter>
+
+     
     </>
   )
 }

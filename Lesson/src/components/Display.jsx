@@ -1,12 +1,14 @@
 function DisplayTransactions (props) {
 
+  console.log(props.transactions)
+
     return(
         <>
         <div>
               <h1>History of Transaction</h1>
 
-              {props.transactions.map((data)=> (
-                <div>
+              {props.transactions.map((data, index)=> (
+                <div key={index}>
 
                   <div className="list-item">
                     <div>
